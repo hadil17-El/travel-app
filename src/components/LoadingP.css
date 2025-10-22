@@ -1,0 +1,126 @@
+/* 🌍 Base styles */
+.loading-container {
+  --font-size: 3rem;
+  --plane-size: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(28, 98%, 67%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🧩 Testo animato */
+.loading-text {
+  font-size: var(--font-size);
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  animation: moveToCenter 2s ease-in-out forwards;
+}
+
+.travel-word {
+  position: relative;
+}
+
+.letter {
+  display: inline-block;
+  color: rgb(44, 149, 144);
+  font-family: "Pacifico", cursive;
+  animation: expandContract 2s ease-in-out infinite;
+  animation-delay: calc(0.2s * var(--i));
+  transform-origin: center;
+  opacity: 1;
+}
+
+/* ✈️ Aereo */
+.airplane {
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  width: var(--plane-size);
+  height: var(--plane-size);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: airplane-flight 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* 🔁 Animazioni */
+@keyframes expandContract {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes moveToCenter {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes airplane-flight {
+  0% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50vw) translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(-40px) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+/* 📱 Mobile-first design */
+@media (min-width: 600px) {
+  .loading-container {
+    --font-size: 4rem;
+    --plane-size: 3.5rem;
+  }
+
+  .travel-word {
+    left: 2rem;
+  }
+
+  .airplane {
+    bottom: 15%;
+  }
+}
+
+/* 💻 Tablet/Desktop */
+@media (min-width: 1024px) {
+  .loading-container {
+    --font-size: 6rem;
+    --plane-size: 4rem;
+  }
+
+  .travel-word {
+    left: 3rem;
+  }
+}
+
+/* 🖥️ Large screen */
+@media (min-width: 1440px) {
+  .loading-container {
+    --font-size: 8rem;
+    --plane-size: 5rem;
+  }
+
+  .travel-word {
+    left: 6rem;
+  }
+}

@@ -1,0 +1,77 @@
+footer {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #363636;
+    gap: 2rem;
+    color: #fff;
+}
+footer .logo {
+    font-size: 3rem;
+    color: rgb(44 149 144);
+    animation: expandContract 2s ease-in-out infinite;
+    font-family: cursive;
+}
+.support,.pay,.follow {
+    flex: 1  1  200px;
+    min-width: 180px;
+}
+
+.support h2, .pay h2 {
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+.support ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.support li {
+    margin: 0.3rem 0;
+    cursor: pointer;
+}
+.pay p {
+    margin: 0.5rem 0 1rem;
+}
+.paymentMethods img {
+    margin-right: 0.5rem;
+}
+.follow span {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.socialMedia {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+.inf {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+
+}
+
+@keyframes expandContract {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+@media(min-width: 375px){
+    footer {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .socialMedia {
+        justify-content: center;
+    }
+}

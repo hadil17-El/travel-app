@@ -6,7 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.loading-page-body {
+  height: 100vh;
+  overflow: hidden;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

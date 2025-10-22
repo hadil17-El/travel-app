@@ -1,0 +1,172 @@
+/* Destination.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero / sezione introduttiva */
+.heroSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.heroText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #090909;
+  text-align: center;
+  padding: 1rem;
+  max-width: 90%;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Sezione destinazioni */
+.destinationsSection {
+  width: 100%;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Card destinazione */
+.card {
+  background-color: #fbefd9;;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cardBody {
+  padding: 1rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.destName {
+  color: #f89412;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.bookingButton {
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.bookingButton:hover {
+  background-color: #e67e00;
+}
+
+/* Paginazione */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pageButton,
+.navButton {
+  background: transparent;
+  border: 2px solid #ccc;
+  color: #ccc;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pageButton:hover,
+.navButton:hover {
+  background-color: #ff8c00;
+  color: #fff;
+  border-color: #ff8c00;
+}
+
+.active {
+  background-color: #ff8c00;
+  color: #fff;
+  border-color: #ff8c00;
+}
+
+/* Responsive per schermi grandi */
+@media (min-width: 1200px) {
+  .heroText .subtitle {
+    font-size: 1.4rem;
+    max-width: 600px;
+  }
+  .title {
+    font-size: 4rem;
+  }
+}

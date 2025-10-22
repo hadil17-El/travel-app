@@ -1,0 +1,123 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.google-btn,
+.apple-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  text-align: center;
+  color: #aaa;
+  margin: 20px 0;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #ff7a00;
+  font-size: 0.9em;
+  display: block;
+  margin: 10px 0;
+  text-align: right;
+}
+
+.login-btn {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.signup-link {
+  color: #ff7a00;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Immagine login */
+.login-image img {
+  width: 100%;
+  max-width: 400px;
+  border-top-left-radius: 16rem;
+  border-top-right-radius: 16rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .login-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form {
+    max-width: 400px;
+  }
+
+  .login-image img {
+    max-width: 500px;
+  }
+}
